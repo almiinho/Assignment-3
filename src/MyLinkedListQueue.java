@@ -17,6 +17,7 @@ public class MyLinkedListQueue<T> {
         return list.getFirst();
     }
     public int size(){return list.size();}
+    public boolean isEmpty(){return list.isEmpty();}
 
 
 
