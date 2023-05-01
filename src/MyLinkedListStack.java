@@ -17,6 +17,7 @@ list = new MyLinkedList<>();
         }
         return list.getFirst();
     }
+    public int size(){return list.size();}
 
 
 }
