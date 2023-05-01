@@ -23,6 +23,16 @@ size = 0;
     public int size() {
         return size;
     }
+    public T removeFirst() throws NoSuchElementException {
+        if (head == null) {
+            throw new NoSuchElementException();
+        }
+        T data = head.data;
+        head = head.next;
+        size--;
+        return data;
+    }
+
 
 }
 
