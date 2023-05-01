@@ -17,7 +17,7 @@ public class MyLinkedList<T> {
         size = 0;
     }
 
-    public void addFirst(T element) {
+    public void addFirst(T element) {// adds elements to the beginning of the list
         Node<T> newNode = new Node<>(element);
         newNode.next = head;
         head = newNode;
@@ -26,9 +26,9 @@ public class MyLinkedList<T> {
 
     public int size() {
         return size;
-    }
+    } // returns the size
 
-    public T removeFirst() throws NoSuchElementException {
+    public T removeFirst() throws NoSuchElementException { // returns and removes first element of the list
         if (head == null) {
             throw new NoSuchElementException();
         }
@@ -38,7 +38,7 @@ public class MyLinkedList<T> {
         return data;
     }
 
-    public T getFirst() throws NoSuchElementException {
+    public T getFirst() throws NoSuchElementException { // returns the first element of the list
         if (head == null) {
             throw new NoSuchElementException();
         }
@@ -49,7 +49,7 @@ public class MyLinkedList<T> {
         return head == null;
     }
 
-    public void addLast(T data) {
+    public void addLast(T data) { // adds the last element to the list
         Node<T> newNode = new Node<>(data);
         Node<T> tail = null;
         if (isEmpty()) {
