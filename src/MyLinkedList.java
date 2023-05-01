@@ -10,5 +10,10 @@ private static class Node<T>{
         this.data = data;
     }
 }
+public MyLinkedList(){
+head = null;
+size = 0;
+
+}
 }
 
