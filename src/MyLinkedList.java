@@ -32,6 +32,12 @@ size = 0;
         size--;
         return data;
     }
+    public T getFirst() throws NoSuchElementException {
+        if (head == null) {
+            throw new NoSuchElementException();
+        }
+        return head.data;
+    }
 
 
 }
