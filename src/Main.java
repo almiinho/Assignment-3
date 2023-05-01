@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
@@ -15,6 +17,21 @@ public class Main {
         System.out.println(stack.size());
         System.out.println(stack.pop());
         System.out.println(stack.size());
+        System.out.println("End of stack implementation");
+
+        Queue queue = new LinkedList();
+        System.out.println(queue.isEmpty());
+        queue.add("ADS");
+        queue.add("DBMS");
+        queue.add("Calculus");
+        queue.add("PE");
+        queue.add("Sociology");
+        System.out.println(queue.size());
+
+
+
+
+
 
 
     }
