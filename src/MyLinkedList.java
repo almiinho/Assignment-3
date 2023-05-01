@@ -2,27 +2,32 @@ import java.util.NoSuchElementException;
 public class MyLinkedList<T> {
     private Node<T> head;
     private int size;
-private static class Node<T>{
-    private T data;
-    private Node<T> next;
 
-    public Node(T data) {
-        this.data = data;
+    private static class Node<T> {
+        private T data;
+        private Node<T> next;
+
+        public Node(T data) {
+            this.data = data;
+        }
     }
-}
-public MyLinkedList(){
-head = null;
-size = 0;
-}
+
+    public MyLinkedList() {
+        head = null;
+        size = 0;
+    }
+
     public void addFirst(T element) {
         Node<T> newNode = new Node<>(element);
         newNode.next = head;
         head = newNode;
         size++;
     }
+
     public int size() {
         return size;
     }
+
     public T removeFirst() throws NoSuchElementException {
         if (head == null) {
             throw new NoSuchElementException();
@@ -32,6 +37,7 @@ size = 0;
         size--;
         return data;
     }
+
     public T getFirst() throws NoSuchElementException {
         if (head == null) {
             throw new NoSuchElementException();
@@ -39,6 +45,12 @@ size = 0;
         return head.data;
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
 
+    public void addLast(T data) {
+        Node<T> newNode = new Node<>(data);
+    }
 }
 
