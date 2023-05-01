@@ -13,7 +13,16 @@ private static class Node<T>{
 public MyLinkedList(){
 head = null;
 size = 0;
-
 }
+    public void addFirst(T element) {
+        Node<T> newNode = new Node<>(element);
+        newNode.next = head;
+        head = newNode;
+        size++;
+    }
+    public int size() {
+        return size;
+    }
+
 }
 
