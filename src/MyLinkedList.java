@@ -51,6 +51,15 @@ public class MyLinkedList<T> {
 
     public void addLast(T data) {
         Node<T> newNode = new Node<>(data);
+        Node<T> tail = null;
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
     }
 }
 
